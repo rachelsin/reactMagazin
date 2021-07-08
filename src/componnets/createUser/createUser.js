@@ -11,7 +11,9 @@ function CreateUser(props) {
     const passwordRef = useRef('');
     const emailRef = useRef('');
     function createUser() {
-        let user = { name: nameRef.current.value }
+        console.log('dd');
+        let user = { name: nameRef.current.value, password: passwordRef.current.value, email: emailRef.current.value };
+        console.log('ss');
         props.createUser(user);
     }
     return (
@@ -43,7 +45,6 @@ export default connect(
     (dispatch) => {
         return {
             createUser: (newUser) => dispatch(actions.createUser(newUser))
-
         }
     }
 
