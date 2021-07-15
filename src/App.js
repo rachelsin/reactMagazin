@@ -4,7 +4,7 @@ import { Provider } from 'react-redux'
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import CreateUser from "./componnets/createUser/createUser";
 import Navbar from "./componnets/navbar/navbar";
-
+import CarouselPosts from "./componnets/magazin/carouselPosts";
 function App() {
   return (
     <Provider store={store}>
@@ -15,7 +15,10 @@ function App() {
         <main>
           <Switch>
             <Route path="/login" component={Login} />
-            <Route path="/" component={CreateUser} />
+            <Route path="/carousel" component={CarouselPosts}/>
+
+                
+             <Route path="/" component={CreateUser} />  
           </Switch>
         </main>
       </Router>
