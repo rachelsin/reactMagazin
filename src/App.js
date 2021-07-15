@@ -3,6 +3,8 @@ import store from "./redux/store/store";
 import { Provider } from 'react-redux'
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import CreateUser from "./componnets/createUser/createUser";
+import Navi from "./componnets/navbar/nav";
+
 import Navbar from "./componnets/navbar/navbar";
 import CarouselPosts from "./componnets/magazin/carouselPosts";
 function App() {
@@ -10,7 +12,7 @@ function App() {
     <Provider store={store}>
       <Router>
         <header>
-          <Navbar />
+          <Navi />
         </header>
         <main>
           <Switch>
