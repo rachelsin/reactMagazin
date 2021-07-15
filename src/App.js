@@ -3,14 +3,14 @@ import store from "./redux/store/store";
 import { Provider } from 'react-redux'
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import CreateUser from "./componnets/createUser/createUser";
-import Navbar from "./componnets/navbar/navbar";
+import Navi from "./componnets/navbar/nav";
 
 function App() {
   return (
     <Provider store={store}>
       <Router>
         <header>
-          <Navbar />
+          <Navi />
         </header>
         <main>
           <Switch>
