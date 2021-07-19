@@ -1,0 +1,41 @@
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdownContent {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #ffffff;
+  min-width: 300px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  border: 1px solid rgb(223, 223, 223);
+}
+
+.dropdownContent a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdownContent a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdownContent {
+  display: block;
+}
+
+
+/* Sinup css */
+/* .card {
+    margin-bottom: 20px;
+    border: none
+} */
+
+.center {
+  margin: 70px 0;
+  /* border: 3px solid green; */
+  text-align: center;
+}
