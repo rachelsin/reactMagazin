@@ -10,7 +10,8 @@ import Logout from './componnets/login/logout'
 import CarouselPosts from "./componnets/magazin/carouselPosts";
 import Home from './componnets/home/home';
 import userService from './redux/middleware/userCrud'
-// esty
+import CreatePost from "./componnets/createPost/createPost"
+// create
 function App() {
   const [user, setUser] = useState()
 
@@ -31,6 +32,7 @@ function App() {
             <Route path="/signup" component={signup} />
             <Route path="/logout" component={Logout} />
             <Route path="/login" component={Login} />
+            <Route path="/createPost" component={CreatePost}></Route>
             <Route path="/" component={Home} />
           </Switch>
         </main>
