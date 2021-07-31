@@ -1,0 +1,53 @@
+ const magazinsReducer={
+    addMagazin(state,action){
+        state.magazins.push(action.payLoad)
+    },
+     updateTitleMagazin(state,action){
+            state.magazins.find(x=>x.idMagazin===action.payLoad.idMagazin).titleMagazin=action.payLoad.titleMagazin;
+    },
+    updateTitlePost(state,action){
+        state.magazins.find(x=>x.idMagazin===action.payLoad.idMagazin)
+        .find(post=>post.idPost===action.payLoad.magazins.posts.idPost).titlePost=action.payLoad.magazins.posts.titlePost;
+},
+    updateDescriptionPost(state,action){
+        state.magazins.find(x=>x.idMagazin===action.payLoad.idMagazin)
+        .find(post=>post.idPost===action.payLoad.magazins.posts.idPost).descriptionPost=action.payLoad.magazins.posts.descriptionPost;
+},
+    addPost(state,action){
+
+    },
+    updatePost(state,action){
+
+    },
+     removeMagazin(state,action){
+         
+         state.magazins.filter((magazin)=>{return product.id !=action.payLoad.id} )
+     },
+     removePost(state,action){
+         
+     }
+
+
+ }
+ /// magazin magazinsReducer
+
+
+ import produce from 'immer'
+import createReducer from './reducerUtil'
+
+//1.create object store, database
+const initialState={
+    magazins:[
+        {idMagazin:'1',titleMagazin:'stories',author:'David',createMagazinDate:'19/07/2021',imageMagazin:'https://pixabay.com/get/g0d2a45107a1c6b603408798bfcfa0eb40ee30b3fa55a15dc0342328538382851fec2fde78bab4d536bcaf9665021df31_1920.jpg',
+        posts:[
+            {idPost:'1.1',titlePost:'Post1',descriptionPost:'This is decription of post #1',createPostDate:'19/07/2021',imagePost:'https://cdn.pixabay.com/photo/2021/07/13/18/58/coffee-6464307__480.jpg'},
+            {idPost:'1.2',titlePost:'Post2',descriptionPost:'This is decription of post #2',createPostDate:'19/07/2021',imagePost:'https://pixabay.com/get/g5c9d2b67c5fa00330debc883f5819cbe563020a96670473c3628cc84658bd543b0422020b63490e6a767acc576dbf807_1920.jpg'},
+            {idPost:'1.3',titlePost:'Post3',descriptionPost:'This is decription of post #3',createPostDate:'19/07/2021',imagePost:'https://pixabay.com/get/gd586e98bd24869fc3aece2f73a2b42fedf62b059f879cfbcf9c1270b5240ad23f77ddcbc5a69393d1763c0c1f40d9dfa_1920.jpg'}
+    ]}
+    ]
+    
+};
+ const magazinsReducer={
+   
+ }
+export default produce((state,action)=>createReducer(state,action,magazinsReducer),initialState);
