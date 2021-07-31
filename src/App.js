@@ -38,7 +38,7 @@ function App() {
             <Route path="/login" component={Login} />
             <Route path="/magazin" component={Magazin}/>
 
-           // <Route path="/" component={CreateUser} />  
+            {/* <Route path="/" component={CreateUser} />    */}
 
             <Route path="/createPost" component={CreatePost}></Route>
             <Route path="/" component={Home} />
